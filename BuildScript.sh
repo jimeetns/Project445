@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 #Install Java 8
 sudo add-apt-repository ppa:webupd8team/java
@@ -15,13 +15,13 @@ sudo mv apache-tomcat-8.0.33 /opt/tomcat
 cd /opt/tomcat/bin
 chmod 744 *sh
 
-#Ensure Project445 folder is in HOME/UserName of the test environment.
+#Ensure Project445 folder is in HOME/UserName of the test environment
+#(Basically the Home Folder).
 #Change directory to Project445
 cd ~/Project445
 
-cp *.csv /opt/tomcat/bin
-
 mkdir WEB-INF/classes
+cp *.csv /opt/tomcat/bin
 
 #Compile source files
 javac -cp "WEB-INF/lib/*" -d WEB-INF/classes *.java
